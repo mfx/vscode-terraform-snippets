@@ -1,0 +1,34 @@
+{
+    // EXAMPLE FROM AWS
+    // ///////////////////////////////////////////////////
+    // "aws": {
+    //     "prefix": "tf-aws",
+    //     "description": "define a aws provider.",
+    //     "body": [
+    //         "provider \"aws\" {",
+    //         "   access_key = \"AWS ACCESS KEY\"",
+    //         "   secret_key = \"AWS SECRET KEY\"",
+    //         "   region = \"AWS REGION\"",
+    //         "}"
+    //     ]
+    // },
+    // "aws-region-ca-central-1": {
+    //     "prefix": "tf-aws-region-ca-central-1",
+    //     "description": "Define a aws-region-ca-central-1 Canada (Central) region code",
+    //     "body": [
+    //         "\"ca-central-1\""
+    //     ]
+    // }
+
+    "rancher": {
+        "prefix": "tf-rancher-provider",
+        "description": "Configure the Rancher provider.",
+        "body": [
+            "provider \"rancher\" {",
+            "   api_url = \"http://rancher.my-domain.com:8080\"",
+            "   access_key = \"${var.rancher_access_key}\"",            
+            "   secret_key = \"${var.rancher_secret_key}\"",
+            "}"
+        ]
+    }
+}
